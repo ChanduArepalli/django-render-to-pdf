@@ -8,7 +8,11 @@ cd django-render-to-pdf
 pip install -r requirements.txt 
 python manage.py runserver
 ```
-`or`
+
+<hr>
+->`or`<- 
+<hr>
+
 ### Installation
 #### Packages
 
@@ -16,6 +20,10 @@ python manage.py runserver
 pip install django
 pip install --pre xhtml2pdf
 ```
+
+
+
+#### Files
 
 In main project folder `settings.py` file add `template folder` 
 ```python
@@ -36,8 +44,7 @@ TEMPLATES = [
 ]
 ```
 
-#### Files
-`utils.py` file
+`utils.py` file in `App` folder
 ```python
 from io import BytesIO
 from django.http import HttpResponse
@@ -57,7 +64,7 @@ def render_to_pdf(template_src, context_dict={}):
 
 ```
 
-`views.py` file
+`views.py` file in `App` folder
 ```python
 from django.http import HttpResponse
 from django.views.generic import View
@@ -102,7 +109,7 @@ class GenerateAndDownloadPDF(View):
         return HttpResponse("Not found")
 ```
 
-`url.py` file
+`url.py` file in `App` folder
 ```python
 from django.urls import path
 from .views import GeneratePdf, GenerateAndDownloadPDF
