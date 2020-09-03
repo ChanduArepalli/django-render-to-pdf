@@ -10,7 +10,11 @@ python manage.py runserver
 ```
 
 <hr>
-->`or`<- 
+
+     
+`or`
+     
+
 <hr>
 
 ### Installation
